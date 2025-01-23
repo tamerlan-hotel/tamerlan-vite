@@ -6,8 +6,13 @@ i18next
   .init({
     lng: "ua",
     fallbackLng: "ua",
+    // backend: {
+    //   loadPath: "/locales/{{lng}}/translation.json",
+    // },
+    ns: ["translation", "footer"], // Define namespaces
+    defaultNS: "translation", // Default namespace
     backend: {
-      loadPath: "/locales/{{lng}}/translation.json",
+      loadPath: "/locales/{{lng}}/{{ns}}.json", // Adjust load path for namespaces
     },
   })
   .then(() => updateContent());
@@ -17,7 +22,10 @@ export const updateContent = () => {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     console.log("KEY:", key);
-    el.textContent = i18next.t(key);
+    // el.textContent = i18next.t(key);
+    if (key) {
+      el.textContent = i18next.t(key); // Replace the content with the translation
+    }
   });
 };
 
@@ -54,3 +62,5 @@ i18next.on("languageChanged", (lng) => {
 
 // Initial setup
 updateActiveClass();
+
+export default i18next;

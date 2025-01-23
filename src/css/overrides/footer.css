@@ -1,0 +1,19 @@
+.footer-flexbox {
+  @media screen and (min-width: 991px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.social-content > a {
+  color: #337ab7;
+  font-size: 32px;
+}
+
+.social-content > a:hover {
+  color: #23527c;
+}
+
+.social-content > a:first-child {
+  margin-right: 10px;
+}
