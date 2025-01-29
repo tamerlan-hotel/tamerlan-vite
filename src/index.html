@@ -14,13 +14,19 @@
     <link rel="shortcut icon" href="images/favicon.png" />
 
     <!-- GOOGLE FONT -->
-    <link
+    <!-- <link
       href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,500,600,700%7cMontserrat:400,700"
       rel="stylesheet"
       type="text/css"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Wire+One&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Wire+One&display=swap"
       rel="stylesheet"
     />
 
@@ -47,6 +53,7 @@
 
     <!-- MAIN STYLE -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/overrides/header.css" />
     <link rel="stylesheet" type="text/css" href="css/overrides/home.css" />
     <link rel="stylesheet" type="text/css" href="css/overrides/footer.css" />
 
@@ -86,7 +93,7 @@
             </div>
             <div class="header_right float-right">
               <div class="dropdown language">
-                <span data-i18n="header_locale"></span>
+                <span data-i18n="header:locale"></span>
 
                 <ul>
                   <li class="lang-switch active">
@@ -113,11 +120,18 @@
             <nav class="header_menu">
               <ul class="menu">
                 <li class="current-menu-item">
-                  <a href="index.html" data-i18n="nav_home"></a>
+                  <a href="index.html" data-i18n="header:nav_home"></a>
                 </li>
-                <li><a href="activiti.html" data-i18n="nav_activities"></a></li>
-                <li><a href="contact.html" data-i18n="nav_location"></a></li>
-                <li><a href="about.html" data-i18n="nav_about"></a></li>
+                <li>
+                  <a
+                    href="activities.html"
+                    data-i18n="header:nav_activities"
+                  ></a>
+                </li>
+                <li>
+                  <a href="contact.html" data-i18n="header:nav_location"></a>
+                </li>
+                <li><a href="about.html" data-i18n="header:nav_about"></a></li>
               </ul>
             </nav>
             <!-- END / HEADER MENU -->
@@ -564,61 +578,7 @@
       <!-- END / FACILITIES -->
 
       <!-- FOOTER -->
-      <footer id="footer">
-        <!-- FOOTER CENTER -->
-        <div class="footer_center">
-          <div class="container">
-            <div class="row footer-flexbox">
-              <div class="col-xs-12 col-md-2">
-                <div class="header_logo widget">
-                  <a href="#"><img src="images/logo-header.png" alt="" /></a>
-                </div>
-              </div>
-
-              <div class="col-xs-4 col-md-3">
-                <div class="widget">
-                  <ul>
-                    <li><a data-i18n="footer:street"></a></li>
-                    <li><a data-i18n="footer:city"></a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-xs-4 col-md-3">
-                <div class="widget">
-                  <ul>
-                    <li><a>+38067 580 37 77</a></li>
-                    <li><a>tamerlanesc@gmail.com</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-xs-4 col-md-2">
-                <div class="social widget">
-                  <div class="social-content">
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- END / FOOTER CENTER -->
-
-        <!-- FOOTER BOTTOM -->
-        <div class="footer_bottom">
-          <div class="container">
-            <p>
-              &copy; <span id="footer-year"></span>
-              <span data-i18n="footer:copy"
-                >Tamerlan Hotel All rights reserved.</span
-              >
-            </p>
-          </div>
-        </div>
-        <!-- END / FOOTER BOTTOM -->
-      </footer>
+      {{> footer}}
       <!-- END / FOOTER -->
     </div>
     <!-- END / PAGE WRAP -->
