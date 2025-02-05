@@ -14,15 +14,6 @@
     <link rel="shortcut icon" href="images/favicon.png" />
 
     <!-- GOOGLE FONT -->
-    <!-- <link
-      href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,500,600,700%7cMontserrat:400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Wire+One&display=swap"
-      rel="stylesheet"
-    /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -54,6 +45,11 @@
     <!-- MAIN STYLE -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/overrides/header.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/overrides/about-our-hotel.css"
+    />
     <link rel="stylesheet" type="text/css" href="css/overrides/home.css" />
     <link rel="stylesheet" type="text/css" href="css/overrides/footer.css" />
 
@@ -129,9 +125,11 @@
                   ></a>
                 </li>
                 <li>
-                  <a href="contact.html" data-i18n="header:nav_location"></a>
+                  <a href="location.html" data-i18n="header:nav_location"></a>
                 </li>
-                <li><a href="about.html" data-i18n="header:nav_about"></a></li>
+                <li>
+                  <a href="about-us.html" data-i18n="header:nav_about"></a>
+                </li>
               </ul>
             </nav>
             <!-- END / HEADER MENU -->
@@ -259,23 +257,9 @@
       </section>
       <!-- END / BANNER SLIDER -->
 
-      <!-- ABOUT SECTION -->
-      <section class="about_section">
-        <div>
-          <h2 data-i18n="about_title"></h2>
-        </div>
-        <div class="about_text">
-          <p data-i18n="about_p_1"></p>
-
-          <p data-i18n="about_p_2"></p>
-        </div>
-        <!-- <div> -->
-        <a class="awe-btn awe-btn-12 about_button"
-          ><span data-i18n="read_more"></span
-        ></a>
-        <!-- </div> -->
-      </section>
-      <!-- END / ABOUT SECTION -->
+      <!-- ABOUT OUR HOTEL -->
+      {{> about-our-hotel read-more="true"}}
+      <!-- END / ABOUT OUR HOTEL -->
 
       <!-- ROOMS -->
       <section class="section-home-about bg-white bg-rooms">
@@ -299,7 +283,7 @@
                   ></h2>
                   <p data-i18n="rooms_p"></p>
                   <a
-                    href="#"
+                    href="activities.html"
                     class="awe-btn awe-btn-default read-more"
                     data-i18n="read_more"
                   ></a>
@@ -325,7 +309,7 @@
                   ></h2>
                   <p data-i18n="drink_p"></p>
                   <a
-                    href="#"
+                    href="activities.html"
                     class="awe-btn awe-btn-default read-more"
                     data-i18n="read_more"
                   ></a>
@@ -367,7 +351,7 @@
                   ></h2>
                   <p data-i18n="around_p"></p>
                   <a
-                    href="#"
+                    href="activities.html"
                     class="awe-btn awe-btn-default read-more"
                     data-i18n="read_more"
                   ></a>

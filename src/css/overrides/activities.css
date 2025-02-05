@@ -12,8 +12,13 @@
   background-position: center bottom;
   background-repeat: no-repeat;
 
+  @media screen and (min-width: 992px) {
+    padding: 250px 15px 150px;
+  }
+
   @media screen and (max-width: 767px) {
     background-image: unset;
+    padding-bottom: 0;
   }
 }
 
@@ -40,30 +45,53 @@
   font-size: 14px;
 }
 
-.row {
-  display: flex;
-  width: 100%;
-  /* flex-wrap: wrap; */
+.section-activities {
+  max-width: 1900px;
+  margin: 0 auto;
 }
 
-.flex {
+.article {
   display: flex;
-  width: 100%;
+  flex-grow: 1;
+  padding: 0;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse !important;
+  }
+}
+
+.article > * {
+  flex-grow: 1;
 }
 
 .reversed {
   flex-direction: row-reverse;
 }
 
-.sm-reversed {
-  @media screen and (max-width: 767px) {
+.md-reversed {
+  @media screen and (max-width: 991px) {
     flex-direction: row-reverse;
   }
+}
+
+.md-reversed-unset {
+  @media screen and (max-width: 991px) {
+    flex-direction: row;
+  }
+}
+
+.activities {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .activity-col {
   height: 490px;
   padding: 0;
+
+  @media screen and (max-width: 767px) {
+    height: 400px;
+  }
 }
 
 .activity-col img {
@@ -81,6 +109,11 @@
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
+
+  @media screen and (max-width: 767px) {
+    max-width: 340px;
+    text-align: center;
+  }
 }
 
 .big-number {
@@ -106,8 +139,25 @@
   height: 4px;
   background-color: #000000;
   margin: 26px 0;
+
+  @media screen and (max-width: 767px) {
+    margin: 26px auto;
+  }
 }
 
 .activities__content p {
   font-size: 14px;
+}
+
+.darken-image {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    transition: filter 0.3s ease-in-out;
+  }
+}
+
+.darken {
+  @media screen and (max-width: 767px) {
+    filter: brightness(40%);
+  }
 }

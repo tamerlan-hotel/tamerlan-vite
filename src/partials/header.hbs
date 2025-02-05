@@ -39,16 +39,19 @@
           <li>
             <a href="index.html" data-i18n="header:nav_home"></a>
           </li>
-          <li class="current-menu-item">
+          <li class="{{#if activities}}current-menu-item{{/if}}">
             <a href="activities.html" data-i18n="header:nav_activities"></a>
           </li>
-          <li>
-            <a href="contact.html" data-i18n="header:nav_location"></a>
+
+          <li class="{{#if location}}current-menu-item{{/if}}">
+            <a href="location.html" data-i18n="header:nav_location"></a>
           </li>
-          <li><a href="about.html" data-i18n="header:nav_about"></a></li>
+
+          <li class="{{#if about-us}}current-menu-item{{/if}}">
+            <a href="about-us.html" data-i18n="header:nav_about"></a>
+          </li>
         </ul>
       </nav>
-
       <!-- END / HEADER MENU -->
 
       <!-- MENU BAR -->

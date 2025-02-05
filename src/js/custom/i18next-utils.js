@@ -6,7 +6,7 @@ i18next
   .init({
     lng: "ua",
     fallbackLng: "ua",
-    ns: ["translation", "header", "footer", "activities"], // Define namespaces
+    ns: ["translation", "header", "footer", "activities", "about_us"], // Define namespaces
     defaultNS: "translation", // Default namespace
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json", // Adjust load path for namespaces

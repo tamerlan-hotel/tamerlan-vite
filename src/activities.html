@@ -19,15 +19,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Wire+One&display=swap"
       rel="stylesheet"
     />
-    <!-- <link
-      href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,500,600,700%7cMontserrat:400,700"
-      rel="stylesheet"
-      type="text/css"
-    /> -->
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Wire+One&display=swap"
-      rel="stylesheet"
-    /> -->
 
     <!-- CSS LIBRARY -->
     <link
@@ -79,7 +70,7 @@
     <!-- PAGE WRAP -->
     <div id="page-wrap">
       <!-- HEADER -->
-      {{> header}}
+      {{> header activities="true"}}
       <!-- END / HEADER -->
 
       <!-- ABOUT SECTION -->
@@ -94,155 +85,150 @@
       <!-- END / ABOUT SECTION -->
 
       <!-- ACTIVITIES -->
-      <section class="section-activiti bg-white">
-        <!-- <div class="container"> -->
+      <section class="section-activities bg-white">
         <div class="activities">
-          <!-- ROW 1 -->
-          <div class="row">
-            <!-- 01 -->
-            <div class="col-sm-6 col-lg-3 activity-col">
-              <img src="images/activities/img-2.avif" alt="" />
+          <!-- 01 -->
+          <article class="col-xs-12 col-md-6 article">
+            <div class="col-sm-3 activity-col">
+              <img
+                src="images/activities/img-2.avif"
+                alt=""
+                class="darken-image"
+              />
             </div>
-            <div class="col-sm-6 col-lg-3 activity-col">
+            <div class="col-sm-3 activity-col">
               <div class="activities__content">
                 <div class="activities__header">
                   <h2 class="heading big-number">01</h2>
                   <h2
                     class="heading heading-title"
-                    data-i18n="drink_title"
+                    data-i18n="activities:01-title"
                   ></h2>
                 </div>
                 <div class="activities__text">
-                  <p>
-                    I'm a paragraph. Click here to add your own text and edit
-                    me. I’m a great place for you to tell a story and let your
-                    users know a little more about you.
-                  </p>
+                  <p data-i18n="activities:01-p"></p>
                 </div>
               </div>
             </div>
-            <!-- 02 -->
-            <div class="flex">
-              <div class="col-md-6 col-lg-3 activity-col">
-                <img src="images/activities/img-2.avif" alt="" />
-              </div>
-              <div class="col-md-6 col-lg-3 activity-col">
-                <div class="activities__content">
-                  <div class="activities__header">
-                    <h2 class="heading big-number">02</h2>
-                    <h2
-                      class="heading heading-title"
-                      data-i18n="drink_title"
-                    ></h2>
-                  </div>
-                  <div class="activities__text">
-                    <p>
-                      I'm a paragraph. Click here to add your own text and edit
-                      me. I’m a great place for you to tell a story and let your
-                      users know a little more about you.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ROW 2 -->
-          <div class="row reversed">
-            <!-- 03 -->
-            <div class="col-md-6 col-lg-3 activity-col">
+          </article>
+          <!-- 02 -->
+          <article class="col-xs-12 col-md-6 md-reversed article">
+            <div class="col-sm-3 activity-col">
               <img src="images/activities/img-2.avif" alt="" />
             </div>
-            <div class="col-md-6 col-lg-3 activity-col">
+            <div class="col-sm-3 activity-col">
+              <div class="activities__content">
+                <div class="activities__header">
+                  <h2 class="heading big-number">02</h2>
+                  <h2
+                    class="heading heading-title"
+                    data-i18n="activities:02-title"
+                  ></h2>
+                </div>
+                <div class="activities__text">
+                  <p data-i18n="activities:02-p"></p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- 03 -->
+          <article
+            class="article col-xs-12 col-md-6 reversed md-reversed-unset"
+          >
+            <div class="col-sm-3 activity-col">
+              <img
+                src="images/activities/img-2.avif"
+                alt=""
+                class="darken-image"
+              />
+            </div>
+            <div class="col-sm-3 activity-col">
               <div class="activities__content">
                 <div class="activities__header">
                   <h2 class="heading big-number">03</h2>
                   <h2
                     class="heading heading-title"
-                    data-i18n="drink_title"
+                    data-i18n="activities:03-title"
                   ></h2>
                 </div>
                 <div class="activities__text">
-                  <p>
-                    I'm a paragraph. Click here to add your own text and edit
-                    me. I’m a great place for you to tell a story and let your
-                    users know a little more about you.
-                  </p>
+                  <p data-i18n="activities:03-p"></p>
                 </div>
               </div>
             </div>
-            <!-- 04 -->
-            <div class="col-md-6 col-lg-3 activity-col">
-              <img src="images/activities/img-2.avif" alt="" />
+          </article>
+          <!-- 04 -->
+          <article class="ol-xs-12 col-md-6 reversed article">
+            <div class="col-sm-3 activity-col">
+              <img
+                src="images/activities/img-2.avif"
+                alt=""
+                class="darken-image"
+              />
             </div>
-            <div class="col-md-6 col-lg-3 activity-col">
+            <div class="col-sm-3 activity-col">
               <div class="activities__content">
                 <div class="activities__header">
                   <h2 class="heading big-number">04</h2>
                   <h2
                     class="heading heading-title"
-                    data-i18n="drink_title"
+                    data-i18n="activities:04-title"
                   ></h2>
                 </div>
                 <div class="activities__text">
-                  <p>
-                    I'm a paragraph. Click here to add your own text and edit
-                    me. I’m a great place for you to tell a story and let your
-                    users know a little more about you.
-                  </p>
+                  <p data-i18n="activities:04-p"></p>
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- ROW 3 -->
-          <div class="row">
-            <!-- 05 -->
-            <div class="col-md-6 col-lg-3 activity-col">
-              <img src="images/activities/img-2.avif" alt="" />
+          </article>
+          <!-- 05 -->
+          <article class="col-xs-12 col-md-6 article">
+            <div class="col-sm-3 activity-col">
+              <img
+                src="images/activities/img-2.avif"
+                alt=""
+                class="darken-image"
+              />
             </div>
-            <div class="col-md-6 col-lg-3 activity-col">
+            <div class="col-sm-3 activity-col">
               <div class="activities__content">
                 <div class="activities__header">
                   <h2 class="heading big-number">05</h2>
                   <h2
                     class="heading heading-title"
-                    data-i18n="drink_title"
+                    data-i18n="activities:05-title"
                   ></h2>
                 </div>
                 <div class="activities__text">
-                  <p>
-                    I'm a paragraph. Click here to add your own text and edit
-                    me. I’m a great place for you to tell a story and let your
-                    users know a little more about you.
-                  </p>
+                  <p data-i18n="activities:05-p"></p>
                 </div>
               </div>
             </div>
-            <!-- 06 -->
-            <div class="col-md-6 col-lg-3 activity-col">
-              <img src="images/activities/img-2.avif" alt="" />
+          </article>
+          <!-- 06 -->
+          <article class="col-xs-12 col-md-6 md-reversed article">
+            <div class="col-sm-3 activity-col">
+              <img
+                src="images/activities/img-2.avif"
+                alt=""
+                class="darken-image"
+              />
             </div>
-            <div class="col-md-6 col-lg-3 activity-col">
+            <div class="col-sm-3 activity-col">
               <div class="activities__content">
                 <div class="activities__header">
                   <h2 class="heading big-number">06</h2>
                   <h2
                     class="heading heading-title"
-                    data-i18n="drink_title"
+                    data-i18n="activities:06-title"
                   ></h2>
                 </div>
                 <div class="activities__text">
-                  <p>
-                    I'm a paragraph. Click here to add your own text and edit
-                    me. I’m a great place for you to tell a story and let your
-                    users know a little more about you.
-                  </p>
+                  <p data-i18n="activities:06-p"></p>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- END OF ROW 3 -->
+          </article>
         </div>
         <!-- </div> -->
       </section>

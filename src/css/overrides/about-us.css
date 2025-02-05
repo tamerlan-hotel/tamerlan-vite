@@ -1,0 +1,87 @@
+.about_section {
+  padding: 250px 15px 100px;
+}
+
+.parallax-section {
+  background-image: url("../../images/about-us/bg-2.webp");
+  background-position: left top;
+}
+
+.parallax-section::before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 100%;
+  background-color: #ffffff;
+
+  @media screen and (min-width: 992px) {
+    height: 70px;
+  }
+}
+
+.parallax-section::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 100%;
+  background-color: #ffffff;
+
+  @media screen and (min-width: 992px) {
+    height: 70px;
+  }
+}
+
+.awe-parallax {
+  background-position: center 50px !important;
+  height: 480px;
+}
+
+.guestbook-section {
+  padding: 150px 0;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guestbook-section h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+
+.guestbook-section h2::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 4px;
+  background-color: #000000;
+  margin: 26px auto;
+}
+
+.guestbook-content .text {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  line-height: 2.5 !important;
+}
+
+.guestbook-content .text * {
+  color: #000000 !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 2 !important;
+}
+
+.guestbook-item .text p:before {
+  left: -10px;
+  top: -20px;
+}
+
+.owl-controls .owl-pagination .owl-page.active {
+  background-color: #000000;
+}
+
+.owl-controls .owl-pagination .owl-page {
+  border-color: #000000;
+  border-width: 1px;
+}

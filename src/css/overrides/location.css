@@ -1,0 +1,45 @@
+.about_section {
+  padding: 250px 15px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color: #ffffff;
+  background-image: url("../../images/about/bg-1.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and (min-width: 992px) {
+    padding: 250px 15px 150px;
+  }
+
+  @media screen and (max-width: 767px) {
+    background-image: unset;
+    padding-bottom: 0;
+  }
+}
+
+.about_section h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.about_section h2::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 4px;
+  background-color: #000000;
+  margin: 26px auto;
+}
+
+.about_text {
+  text-align: center;
+  max-width: 685px;
+}
+
+.about_text p {
+  font-size: 14px;
+}
