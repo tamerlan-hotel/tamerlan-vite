@@ -19,22 +19,18 @@ i18next
       loadPath: "/locales/{{lng}}/{{ns}}.json", // Adjust load path for namespaces
     },
   })
-  .then(() => {
-    updateContent();
-    return updatePlaceholder();
-  });
+  .then(() => updateContent());
 
 // Function to update content dynamically
 export const updateContent = () => {
+  // For data-i18n attribute
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     if (key) {
       el.textContent = i18next.t(key); // Replace the content with the translation
     }
   });
-};
-
-export const updatePlaceholder = () => {
+  // For data-i18n-placeholder attribute
   document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
     const key = el.getAttribute("data-i18n-placeholder");
     if (key) {
