@@ -6,21 +6,39 @@ i18next
   .init({
     lng: "ua",
     fallbackLng: "ua",
-    ns: ["translation", "header", "footer", "activities", "about_us"], // Define namespaces
+    ns: [
+      "translation",
+      "header",
+      "footer",
+      "activities",
+      "about_us",
+      "location",
+    ], // Define namespaces
     defaultNS: "translation", // Default namespace
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json", // Adjust load path for namespaces
     },
   })
-  .then(() => updateContent());
+  .then(() => {
+    updateContent();
+    return updatePlaceholder();
+  });
 
 // Function to update content dynamically
 export const updateContent = () => {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    console.log("KEY:", key);
     if (key) {
       el.textContent = i18next.t(key); // Replace the content with the translation
+    }
+  });
+};
+
+export const updatePlaceholder = () => {
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (key) {
+      el.setAttribute("placeholder", i18next.t(key));
     }
   });
 };

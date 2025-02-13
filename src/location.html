@@ -40,6 +40,12 @@
     />
 
     <!-- MAIN STYLE -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/overrides/header.css" />
     <link rel="stylesheet" type="text/css" href="css/overrides/footer.css" />
@@ -55,7 +61,7 @@
   <!--[if IE 8]> <body class="ie8 lt-ie9 lt-ie10"> <![endif]-->
   <!--[if IE 9]> <body class="ie9 lt-ie10"> <![endif]-->
   <!--[if (gt IE 9)|!(IE)]><!-->
-  <body>
+  <body id="body">
     <!--<![endif]-->
 
     <!-- PRELOADER -->
@@ -70,186 +76,179 @@
       {{> header location="true"}}
       <!-- END / HEADER -->
 
+      <!-- LOCATION -->
       <section class="about_section bg-white">
-        <div>
-          <h2 data-i18n="activities:about_title"></h2>
-        </div>
         <div class="about_text">
-          <p data-i18n="activities:about_p"></p>
+          <h2 data-i18n="location:location_title"></h2>
+          <p data-i18n="location:location_subtitle_1"></p>
+          <p data-i18n="location:location_subtitle_2"></p>
         </div>
       </section>
-
-      <!-- SUB BANNER -->
-      <section class="section-sub-banner bg-9">
-        <div class="sub-banner">
-          <div class="container">
-            <div class="text text-center">
-              <h2>CONTACT WITH US</h2>
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- END / SUB BANNER -->
-
-      <!-- CONTACT -->
-      <section class="section-contact">
-        <div class="container">
-          <div class="contact">
-            <div class="row">
-              <div class="col-md-6 col-lg-5">
-                <div class="text">
-                  <h2>Contact</h2>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries.
-                  </p>
-                  <ul>
-                    <li>
-                      <i class="icon lotus-icon-location"></i> 225 Beach Street,
-                      Australian
-                    </li>
-                    <li>
-                      <i class="icon lotus-icon-phone"></i> +61 2 6854 8496
-                    </li>
-                    <li>
-                      <i class="icon fa fa-envelope-o"></i> lotushotel@gmail.com
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="contact-location">
-                  <a
-                    class="btn-collapse"
-                    data-toggle="collapse"
-                    href="#location"
-                    >OTHER LOCATION <span class="fa fa-angle-down"></span
-                  ></a>
-                  <div class="collapse" id="location">
-                    <div class="location-group">
-                      <h6>NORTH AMERICA</h6>
-                      <span>Caribbean, French West Indies</span>
-
-                      <!-- ITEM -->
-                      <div
-                        class="location-item"
-                        data-location="39.0926986,-94.5747324"
-                      >
-                        <div class="img">
-                          <img src="images/contact/img-1.jpg" alt="" />
-                          <i class="fa fa-map-marker"></i>
-                        </div>
-                        <div class="text">
-                          <address>
-                            PO Box 4077, 2584 St Martin, CEDEX, French West
-                            Indies
-                          </address>
-                          <p>
-                            Tel: 858 634 8975 <br />
-                            Fax: +1 212 854 7039
-                          </p>
-                        </div>
-                      </div>
-                      <!-- END / ITEM -->
-
-                      <!-- ITEM -->
-                      <div
-                        class="location-item"
-                        data-location="39.0912284,-94.5743515"
-                      >
-                        <div class="img">
-                          <img src="images/contact/img-2.jpg" alt="" />
-                          <i class="fa fa-map-marker"></i>
-                        </div>
-                        <div class="text">
-                          <address>
-                            PO Box 4077, 2584 St Martin, CEDEX, French West
-                            Indies
-                          </address>
-                          <p>
-                            Tel: 858 634 8975 <br />
-                            Fax: +1 212 854 7039
-                          </p>
-                        </div>
-                      </div>
-                      <!-- END / ITEM -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-lg-6 col-lg-offset-1">
-                <div class="contact-form">
-                  <form
-                    id="send-contact-form"
-                    action="https://landing.engotheme.com/html/lotus/demo/send_mail_contact.php"
-                    method="post"
-                  >
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <input
-                          type="text"
-                          class="field-text"
-                          name="name"
-                          placeholder="Name"
-                        />
-                      </div>
-                      <div class="col-sm-6">
-                        <input
-                          type="text"
-                          class="field-text"
-                          name="email"
-                          placeholder="Email"
-                        />
-                      </div>
-                      <div class="col-sm-12">
-                        <input
-                          type="text"
-                          class="field-text"
-                          name="subject"
-                          placeholder="Subject"
-                        />
-                      </div>
-                      <div class="col-sm-12">
-                        <textarea
-                          cols="30"
-                          rows="10"
-                          name="message"
-                          class="field-textarea"
-                          placeholder="Write what do you want"
-                        ></textarea>
-                      </div>
-                      <div class="col-sm-6">
-                        <button type="submit" class="awe-btn awe-btn-13">
-                          SEND
-                        </button>
-                      </div>
-                    </div>
-                    <div id="contact-content"></div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- END / CONTACT -->
+      <!-- END / LOCATION -->
 
       <!-- MAP -->
       <section class="section-map">
-        <h1 class="element-invisible">Map</h1>
-        <div class="contact-map">
-          <div
-            id="map"
-            data-locations="39.0926986,-94.5747324--39.0912284,-94.5743515"
-            data-center="39.0926986,-94.5747324"
-          ></div>
+        <div class="map-container">
+          <div class="map-flexbox">
+            <div class="map-image"></div>
+            <div class="map-leaflet">
+              <div id="map" class="map"></div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- END / MAP -->
+
+      <!-- HOW GET -->
+      <section class="about_section bg-white how-get-section">
+        <div class="about_text">
+          <h2 data-i18n="location:how_get_title"></h2>
+          <p data-i18n="location:how_get_subtitle_1"></p>
+          <p data-i18n="location:how_get_subtitle_2"></p>
+        </div>
+
+        <!-- BY CAR -->
+        <div class="how-get-container">
+          <article class="article-flexbox">
+            <div class="article-content reversed">
+              <div class="article-content-container">
+                <div class="article-header"></div>
+                <h3 class="heading big-number">01</h3>
+                <h3
+                  class="heading heading-title"
+                  data-i18n="location:how_get_car_title"
+                ></h3>
+                <div class="article-text">
+                  <p data-i18n="location:how_get_car_subtitle"></p>
+                </div>
+              </div>
+            </div>
+            <div class="article-img"></div>
+          </article>
+        </div>
+        <!-- BY PUBLIC TRANSPORT -->
+        <div class="how-get-container">
+          <article class="article-flexbox">
+            <div class="article-content">
+              <div class="article-content-container">
+                <div class="article-header"></div>
+                <h3 class="heading big-number">02</h3>
+                <h3
+                  class="heading heading-title"
+                  data-i18n="location:how_get_public_title"
+                ></h3>
+                <div class="article-text">
+                  <p data-i18n="location:how_get_public_subtitle"></p>
+                </div>
+              </div>
+            </div>
+            <div class="article-img"></div>
+          </article>
+        </div>
+        <!-- BY HORSE -->
+        <div class="how-get-container">
+          <article class="article-flexbox">
+            <div class="article-content reversed">
+              <div class="article-content-container">
+                <div class="article-header"></div>
+                <h3 class="heading big-number">03</h3>
+                <h3
+                  class="heading heading-title"
+                  data-i18n="location:how_get_horse_title"
+                ></h3>
+                <div class="article-text">
+                  <p data-i18n="location:how_get_horse_subtitle"></p>
+                </div>
+              </div>
+            </div>
+            <div class="article-img"></div>
+          </article>
+        </div>
+      </section>
+      <!-- END / HOW GET -->
+
+      <!-- CONTACT -->
+      <section>
+        <div class="about_text contact-text">
+          <h2 data-i18n="location:contact_title"></h2>
+          <p>
+            <span data-i18n="footer:street"></span>,
+            <span data-i18n="footer:city"></span>
+          </p>
+          <p>tamerlanesc@gmail.com | +38067 580 37 77</p>
+          <div class="social widget">
+            <div class="social-content">
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-contact">
+          <div class="container">
+            <div class="contact">
+              <div class="row">
+                <div class="col-md-6 col-lg-6 col-lg-offset-1">
+                  <div class="contact-form">
+                    <form
+                      id="send-contact-form"
+                      action="https://landing.engotheme.com/html/lotus/demo/send_mail_contact.php"
+                      method="post"
+                    >
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <input
+                            type="text"
+                            class="field-text"
+                            name="name"
+                            placeholder="Name"
+                            data-i18n-placeholder="location:form_name"
+                          />
+                        </div>
+                        <div class="col-sm-6">
+                          <input
+                            type="text"
+                            class="field-text"
+                            name="email"
+                            placeholder="Email"
+                            data-i18n-placeholder="location:form_email"
+                          />
+                        </div>
+                        <div class="col-sm-12">
+                          <input
+                            type="text"
+                            class="field-text"
+                            name="subject"
+                            placeholder="Subject"
+                            data-i18n-placeholder="location:form_subject"
+                          />
+                        </div>
+                        <div class="col-sm-12">
+                          <textarea
+                            cols="30"
+                            rows="10"
+                            name="message"
+                            class="field-textarea"
+                            placeholder="Write what do you want"
+                            data-i18n-placeholder="location:form_message"
+                          ></textarea>
+                        </div>
+                        <div class="col-sm-6">
+                          <button type="submit" class="awe-btn awe-btn-13">
+                            SEND
+                          </button>
+                        </div>
+                      </div>
+                      <div id="contact-content"></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CONTACT -->
 
       <!-- FOOTER -->
       {{> footer}}
@@ -262,8 +261,6 @@
     <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/lib/bootstrap-select.js"></script>
-    <script src="http://maps.google.com/maps/api/js?key=AIzaSyAb2lfsiytHD7rMhBaAvJz2CKhk05uiIuE"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true"></script>
     <script type="text/javascript" src="js/lib/isotope.pkgd.min.js"></script>
     <script
       type="text/javascript"
@@ -295,5 +292,10 @@
     <script type="text/javascript" src="js/scripts.js"></script>
     <!-- Custom Scripts -->
     <script type="module" src="js/custom/location.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
   </body>
 </html>
