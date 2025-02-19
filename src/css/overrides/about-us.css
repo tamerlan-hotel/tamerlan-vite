@@ -7,26 +7,18 @@
   background-position: left top;
 }
 
-.parallax-section::before {
-  content: "";
-  display: block;
-  height: 0;
-  width: 100%;
-  background-color: #ffffff;
-
-  @media screen and (min-width: 992px) {
-    height: 70px;
-  }
-}
-
+.parallax-section::before,
 .parallax-section::after {
   content: "";
   display: block;
   height: 0;
   width: 100%;
   background-color: #ffffff;
+}
 
-  @media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
+  .parallax-section::before,
+  .parallax-section::after {
     height: 70px;
   }
 }

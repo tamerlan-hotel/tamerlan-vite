@@ -28,15 +28,11 @@ export default defineConfig({
     }),
     viteStaticCopy({
       targets: [
-        { src: "js/*.min.js", dest: "js" },
-        { src: "js/custom-scripts.js", dest: "js" },
-        { src: "functions/*.js", dest: "functions" },
-        { src: "css/*.min.css", dest: "css" },
-        { src: "css/*.css", dest: "css" },
+        { src: "js/*", dest: "js" },
+        { src: "locales/*", dest: "locales" },
         { src: "fonts/**/*", dest: "fonts" },
         { src: "images/**/*", dest: "images" },
         { src: "../netlify.toml", dest: "." },
-        { src: "package.json", dest: "." },
       ],
     }),
     {

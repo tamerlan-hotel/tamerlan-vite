@@ -1,10 +1,13 @@
 import i18next from "i18next";
 import I18NextHttpBackend from "i18next-http-backend";
+import Cookies from "js-cookie";
+
+const savedLang = Cookies.get("lang") || "ua"; // Отримуємо мову з кукі або ставимо "ua"
 
 i18next
   .use(I18NextHttpBackend)
   .init({
-    lng: "ua",
+    lng: savedLang,
     fallbackLng: "ua",
     ns: [
       "translation",
@@ -16,7 +19,7 @@ i18next
     ], // Define namespaces
     defaultNS: "translation", // Default namespace
     backend: {
-      loadPath: "/locales/{{lng}}/{{ns}}.json", // Adjust load path for namespaces
+      loadPath: "./locales/{{lng}}/{{ns}}.json", // Adjust load path for namespaces
     },
   })
   .then(() => updateContent());
@@ -53,7 +56,12 @@ export const updateActiveClass = () => {
 // Add event listeners for language switching
 document.querySelectorAll(".lang-switch").forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    i18next.changeLanguage(e.target.dataset.lang, updateContent);
+    const newLang = e.target.dataset.lang;
+    i18next.changeLanguage(newLang, () => {
+      Cookies.set("lang", newLang, { expires: 365 });
+      updateContent();
+      updateActiveClass();
+    });
   });
 });
 
