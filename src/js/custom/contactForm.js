@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Execute reCAPTCHA verification
     const token = await grecaptcha.execute(
-      "6LdOorAqAAAAAIVCEijmmJ0KmD5px_V5nAfdNmp-", // reCAPTCHA site key
+      "6LeDNuQqAAAAAOrA5otIacy1wXHriwjGBxTZ7cYq", // reCAPTCHA site key
       {
         action: "submit",
       }
