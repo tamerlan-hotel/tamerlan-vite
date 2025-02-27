@@ -1,3 +1,8 @@
+.weather-container img {
+  height: 30px;
+  transform: translateY(-2px);
+}
+
 .section-home-about {
   @media screen and (max-width: 991px) {
     padding-top: 0;

@@ -16,6 +16,7 @@ i18next
       "activities",
       "about_us",
       "location",
+      "404"
     ], // Define namespaces
     defaultNS: "translation", // Default namespace
     backend: {

@@ -1,5 +1,6 @@
 import footer from "./footer";
 import i18 from "./i18next-utils";
+import weather from "./weather";
 
 const observer = new MutationObserver(() => {
   document

@@ -15,5 +15,6 @@
   "form_name": "Name",
   "form_email": "Email",
   "form_subject": "Subject",
-  "form_message": "Write your message here"
+  "form_message": "Write your message here",
+  "form_submit": "Send"
 }

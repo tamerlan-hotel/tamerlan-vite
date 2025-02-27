@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <!-- TITLE -->
-    <title>Location</title>
+    <title>Tamerlan - Location</title>
 
     <meta
       name="viewport"
@@ -11,7 +11,7 @@
     />
     <meta name="format-detection" content="telephone=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
 
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -170,8 +170,9 @@
                 <div class="col-md-6 col-lg-6 col-lg-offset-1">
                   <div class="contact-form">
                     <form
-                      id="send-contact-form"
-                      action="https://landing.engotheme.com/html/lotus/demo/send_mail_contact.php"
+                      id="contact-form-id"
+                      action="#"
+                      role="form"
                       method="post"
                     >
                       <div class="row">
@@ -182,10 +183,12 @@
                             name="name"
                             placeholder="Name"
                             data-i18n-placeholder="location:form_name"
+                            id="user_name"
                           />
                         </div>
                         <div class="col-sm-6">
                           <input
+                            id="user_email"
                             type="text"
                             class="field-text"
                             name="email"
@@ -195,6 +198,7 @@
                         </div>
                         <div class="col-sm-12">
                           <input
+                            id="email_subject"
                             type="text"
                             class="field-text"
                             name="subject"
@@ -204,6 +208,7 @@
                         </div>
                         <div class="col-sm-12">
                           <textarea
+                            id="email_message"
                             cols="30"
                             rows="10"
                             name="message"
@@ -213,7 +218,11 @@
                           ></textarea>
                         </div>
                         <div class="col-sm-6">
-                          <button type="submit" class="awe-btn awe-btn-13">
+                          <button
+                            data-i18n="location:form_submit"
+                            type="submit"
+                            class="awe-btn awe-btn-13"
+                          >
                             SEND
                           </button>
                         </div>

@@ -15,5 +15,6 @@
   "form_name": "Ім'я",
   "form_email": "Імейл",
   "form_subject": "Тема",
-  "form_message": "Напишіть ваше повідомлення тут"
+  "form_message": "Напишіть ваше повідомлення тут",
+  "form_submit": "Надіслати"
 }
