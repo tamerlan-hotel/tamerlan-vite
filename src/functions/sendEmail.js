@@ -26,6 +26,13 @@ exports.handler = async (event) => {
   const recaptchaResult = await recaptchaResponse.json();
 
   console.log("RECAPTCHA RESULT:", recaptchaResult);
+  console.log(
+    "USER DATA:",
+    user_name,
+    user_email,
+    email_subject,
+    email_message
+  );
 
   if (!recaptchaResult.success || recaptchaResult.score < 0.5) {
     return {
@@ -50,6 +57,8 @@ exports.handler = async (event) => {
       pass: "cf690bc57cdb747a43c057ef45f1bdf9",
     },
   });
+
+  console.log("TRANSPORTER:", transporter);
 
   const mailOptions = {
     // this is required format for mailtrap
