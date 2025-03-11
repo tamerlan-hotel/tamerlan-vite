@@ -16,7 +16,7 @@ i18next
       "activities",
       "about_us",
       "location",
-      "404"
+      "404",
     ], // Define namespaces
     defaultNS: "translation", // Default namespace
     backend: {
@@ -39,6 +39,13 @@ export const updateContent = () => {
     const key = el.getAttribute("data-i18n-placeholder");
     if (key) {
       el.setAttribute("placeholder", i18next.t(key));
+    }
+  });
+  // For data-i18n-error attribute
+  document.querySelectorAll("[data-i18n-error]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-error");
+    if (key) {
+      el.textContent = i18next.t(key);
     }
   });
 };

@@ -16,5 +16,11 @@
   "form_email": "Імейл",
   "form_subject": "Тема",
   "form_message": "Напишіть ваше повідомлення тут",
-  "form_submit": "Надіслати"
+  "form_submit": "Надіслати",
+
+  "error_name_required": "Ім'я обов'язкове",
+  "error_email_required": "Імейл обов'язковий",
+  "error_email_format": "Невірний формат електронної пошти",
+  "error_subject_required": "Тема обов'язкова",
+  "error_message_required": "Повідомлення обов'язкове"
 }

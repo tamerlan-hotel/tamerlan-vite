@@ -7,10 +7,6 @@ fetch(url)
   .then((data) => {
     const temperature = Math.round(data.current.temp_c);
     const iconUrl = data.current.condition.icon;
-    // const precipitation = data.current.precip_mm; // Опади в мм
-
-    console.log("Temperature:", temperature);
-    console.log("Icon URL:", iconUrl);
 
     document.getElementById(
       "weather"

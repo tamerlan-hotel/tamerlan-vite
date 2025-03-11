@@ -6,11 +6,18 @@
  * to a Netlify function endpoint with reCAPTCHA verification.
  */
 
+import i18next from "i18next";
+
 const errorBorderStyle = "1px solid red"; // Style for highlighting invalid fields
 
 // Regular expression for email validation
 const emailRegex =
   /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+const isValidEmail = (email) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
 
 /**
  * Displays an error message below the specified field
@@ -23,8 +30,9 @@ const showError = (field, message) => {
 
   // Create error message element
   const errorSpan = document.createElement("span");
+  errorSpan.setAttribute("data-i18n-error", message);
   errorSpan.className = "error";
-  errorSpan.textContent = message;
+  errorSpan.textContent = i18next.t(message);
   errorSpan.style.color = "red";
 
   // Insert error message after the field
@@ -69,37 +77,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Validate Name field
     if (!userName.value.trim()) {
-      showError(
-        userName,
-        userName.getAttribute("data-msg") || "Name is required."
-      );
+      showError(userName, "location:error_name_required");
       isValid = false;
     }
 
     // Validate Email field - check for empty and valid format
-    if (!userEmail.value.trim() || !emailRegex.test(userEmail.value)) {
-      showError(
-        userEmail,
-        userEmail.getAttribute("data-msg") || "Valid email is required."
-      );
+    if (!userEmail.value.trim()) {
+      showError(userEmail, "location:error_email_required");
+      isValid = false;
+    } else if (!isValidEmail(userEmail.value)) {
+      showError(userEmail, "location:error_email_format");
       isValid = false;
     }
 
     // Validate Subject field
     if (!emailSubject.value.trim()) {
-      showError(
-        emailSubject,
-        emailSubject.getAttribute("data-msg") || "Subject is required."
-      );
+      showError(emailSubject, "location:error_subject_required");
       isValid = false;
     }
 
     // Validate Message field
     if (!emailMessage.value.trim()) {
-      showError(
-        emailMessage,
-        emailMessage.getAttribute("data-msg") || "Message is required."
-      );
+      showError(emailMessage, "location:error_message_required");
       isValid = false;
     }
 
@@ -152,15 +151,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await response.text();
       const status = response.status;
 
-      console.log("RESULT:", result);
-
-      // Display appropriate message based on submission result
-      messageSpan.textContent =
-        status === 200
-          ? "Email sent successfully!"
-          : result || "Failed to send email.";
-
       if (status === 200) {
+        messageSpan.textContent = "Email sent successfully!";
         // On success: Remove message and reset form after delay
         setTimeout(() => {
           messageSpan.remove();
@@ -171,6 +163,8 @@ document.addEventListener("DOMContentLoaded", () => {
           submitButton.disabled = false;
         }, 3000);
       } else {
+        messageSpan.textContent = "ERROR: Failed to send email.";
+        messageSpan.style.color = "red";
         // On failure: Re-enable submit button
         submitButton.disabled = false;
       }

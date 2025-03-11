@@ -16,5 +16,11 @@
   "form_email": "Email",
   "form_subject": "Subject",
   "form_message": "Write your message here",
-  "form_submit": "Send"
+  "form_submit": "Send",
+
+  "error_name_required": "Name is required",
+  "error_email_required": "Email is required",
+  "error_email_format": "Invalid email address",
+  "error_subject_required": "Subject is required",
+  "error_message_required": "Message is required"
 }

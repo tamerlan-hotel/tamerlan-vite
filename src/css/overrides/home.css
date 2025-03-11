@@ -3,6 +3,30 @@
   transform: translateY(-2px);
 }
 
+.slider-caption-sub {
+  font-size: 18px !important;
+
+  @media screen and (min-width: 991px) {
+    font-size: 20px !important;
+  }
+}
+
+.mt-10 {
+  margin-top: 10px;
+
+  @media screen and (min-width: 991px) {
+    margin-top: unset;
+  }
+}
+
+.slider-button {
+  @media screen and (max-width: 991px) {
+    font-size: 12px !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+  }
+}
+
 .section-home-about {
   @media screen and (max-width: 991px) {
     padding-top: 0;

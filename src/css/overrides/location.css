@@ -205,8 +205,10 @@
   height: 4px;
   background-color: #000000;
   margin: 26px 0;
+}
 
-  @media screen and (max-width: 991px) {
+@media screen and (max-width: 991px) {
+  .heading-title::after {
     margin: 14px auto;
   }
 }
@@ -232,4 +234,8 @@
 
 .social {
   transform: translateY(15px);
+}
+
+.form_msg {
+  margin-left: 4px;
 }

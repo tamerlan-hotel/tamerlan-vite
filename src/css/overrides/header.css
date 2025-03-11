@@ -10,3 +10,49 @@
 .header_logo img {
   max-height: 70px;
 }
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+.header-container::before,
+.header-container::after {
+  content: none;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  list-style-type: none;
+  padding: 0;
+
+  @media screen and (max-width: 1216px) {
+    position: absolute;
+    transform: translateX(50%);
+    right: 50%;
+    top: 0;
+  }
+}
+
+.social-list a {
+  color: #337ab7;
+  font-size: 12px;
+}
+
+.social-list a:hover {
+  color: #23527c;
+}
+
+.social-list a:first-child {
+  margin-right: 10px;
+}
+
+.social-list i {
+  font-size: 32px;
+}
