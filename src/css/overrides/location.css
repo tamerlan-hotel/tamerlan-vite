@@ -161,9 +161,21 @@
 }
 
 .article-img {
-  background-image: url("../../images/location/map-img.jpg");
+  /* background-image: url("../../images/location/map-img.jpg"); */
   background-position: center;
   background-size: cover;
+}
+
+.article-img.bg-1 {
+  background-image: url("../../images/location/location-1.jpg");
+}
+
+.article-img.bg-2 {
+  background-image: url("../../images/location/location-2.jpg");
+}
+
+.article-img.bg-3 {
+  background-image: url("../../images/location/location-3.jpg");
 }
 
 .reversed {

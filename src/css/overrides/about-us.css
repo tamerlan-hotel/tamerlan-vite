@@ -2,12 +2,48 @@
   padding: 250px 15px 100px;
 }
 
+/* General styles for the section */
 .parallax-section {
   background-image: url("../../images/about-us/bg-2.webp");
-  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom !important;
 }
 
-.parallax-section::before,
+/* Styles for mobile devices */
+@media screen and (max-width: 768px) {
+  .parallax-section {
+    background-position: center center !important;
+    background-attachment: scroll !important; /* Disable parallax effect on mobile */
+  }
+
+  .awe-parallax {
+    background-position: center center !important;
+    background-attachment: scroll !important;
+    transform: none !important; /* Disable any transformations that the library might add */
+  }
+
+  /* Additional override for higher specificity */
+  .section-home-guestbook.awe-parallax.bg-13 {
+    background-position: center center !important;
+    background-attachment: scroll !important;
+  }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+  .parallax-section {
+    background-position: center center !important; /* changed from left center */
+  }
+
+  /* Override the parallax effect on mobile */
+  .awe-parallax {
+    background-attachment: scroll !important;
+    background-position: center center !important; /* centers the image */
+  }
+}
+
+*/ .parallax-section::before,
 .parallax-section::after {
   content: "";
   display: block;
@@ -24,7 +60,7 @@
 }
 
 .awe-parallax {
-  background-position: center 50px !important;
+  background-position: center 45% !important;
   height: 480px;
 }
 

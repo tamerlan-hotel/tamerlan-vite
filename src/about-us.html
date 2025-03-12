@@ -10,7 +10,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <meta name="format-detection" content="telephone=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <link rel="shortcut icon" href="images/favicon.ico" />
 
     <!-- GOOGLE FONT -->
@@ -151,7 +151,6 @@
     <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/lib/bootstrap-select.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true"></script>
     <script type="text/javascript" src="js/lib/isotope.pkgd.min.js"></script>
     <script
       type="text/javascript"
@@ -179,5 +178,27 @@
     <script type="text/javascript" src="js/scripts.js"></script>
     <!-- Custom scripts -->
     <script type="module" src="js/custom/about-us.js"></script>
+
+    <!-- parallax centering -->
+    <script>
+      $(document).ready(function () {
+        // Check if the device is mobile
+        var isMobile =
+          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          ) || window.innerWidth <= 768;
+
+        if (!isMobile) {
+          // Only initialize parallax on non-mobile devices
+          $(".awe-parallax").parallax("50%", 0.3);
+        } else {
+          // Completely disable parallax on mobile devices
+          $(".awe-parallax").css({
+            "background-position": "center center",
+            "background-attachment": "scroll",
+          });
+        }
+      });
+    </script>
   </body>
 </html>
